@@ -3,8 +3,4 @@ Android Kotlin Hello World Project
 
 Run this demo from your IDE.
 
-```
-./gradlew installDebug
-```
-
-不能成功部署，需要研究。
+注：无法通过命令行`./gradlew installDebug`部署
