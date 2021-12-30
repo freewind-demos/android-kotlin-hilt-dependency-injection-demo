@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -20,5 +22,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.10")
     implementation("androidx.appcompat:appcompat:1.4.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.2")
+    implementation("com.google.dagger:hilt-android:2.40.5")
     annotationProcessor("com.google.dagger:dagger-compiler:2.40.5")
+
+    // Note: have to use `kapt`, otherwise it will throw error `Hilt_xxx` class not found
+    kapt("com.google.dagger:hilt-android-compiler:2.40.5")
+    // annotationProcessor("com.google.dagger:dagger-compiler:2.40.5")
 }
