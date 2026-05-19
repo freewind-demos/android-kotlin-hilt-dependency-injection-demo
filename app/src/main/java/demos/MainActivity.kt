@@ -1,4 +1,4 @@
-package demos
+package demos.android.kotlin.hilt.dependency.injection.demo
 
 import android.os.Bundle
 import android.widget.TextView
